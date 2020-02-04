@@ -1,0 +1,90 @@
+/* Scale line */
+
+@media print {
+    .ol-scale-line {
+        -webkit-print-color-adjust: exact; 
+    }
+}
+
+.ol-scale-line {
+    background: rgba(183, 183, 183, 0.80);
+    padding: 5px;
+}
+
+.ol-scale-line-inner {
+    border: 1px solid black;
+    border-top: none;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    margin: 1px;
+    will-change: contents, width
+}
+
+/* Print */
+
+@media print {
+    .print-tight {
+        border: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 0 !important;
+        width: auto !important;
+        height: auto !important
+    }
+}
+
+@media print {
+    body {
+        margin: 0;
+        background-color: #FFFFFF
+    }
+}
+
+/* Page */
+
+#page-container {
+    margin: auto;
+}
+
+.page {
+    position: relative;
+    border: 1px solid #666;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    width: 21cm;
+    height: 29.7cm;
+    box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 4px;
+    page-break-after: always
+}
+
+.page-inner {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin-left: 0cm; 
+    margin-right: 0cm; 
+    margin-top: 0cm; 
+    margin-bottom: 0cm;
+    page-break-after: auto
+}
+
+/* Page Print */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .page-inner, .page-inner * {
+    visibility: visible;
+  }
+  .page-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

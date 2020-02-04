@@ -1,0 +1,232 @@
+/* Scale line */
+
+.ol-scale-line {
+    background: rgba(183, 183, 183, 0.80);
+    padding: 5px;
+}
+
+.ol-scale-line-inner {
+    border: 1px solid black;
+    border-top: none;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    margin: 1px;
+    will-change: contents, width
+}
+
+/* Link */
+a {
+    color: #666
+}
+
+a:hover {
+    color: #7f8c8d
+}
+
+a:active {
+    color: #7f8c8d
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", sans-serif
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none
+}
+
+/* Jquery UI Theme */
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #a1a1a1;
+	background: #7f8c8d;
+	font-weight: normal;
+	color: #ffffff;
+}
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+	border: #a1a1a1;
+	background-color: #ffffff;
+}
+
+/* Screen */
+
+@media print {
+    .no-print {
+        display: none
+    }
+}
+
+@media print {
+    .print-tight {
+        border: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        min-width: 0 !important;
+        width: auto !important;
+        height: auto !important
+    }
+}
+
+@media screen {
+    .no-screen {
+        display: none
+    }
+}
+
+/* Button */
+
+.button-flat {
+    text-align: center
+}
+
+.button-flat button {
+    background-color: #7f8c8d;
+    border: 0;
+    color: white;
+    padding: 0.3em 1em;
+    cursor: pointer;
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8
+}
+
+.button-flat button:hover {
+    filter: progid: DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1
+}
+
+/* Body */
+
+body {
+    margin: 0;
+    padding: 0
+}
+
+#left-column {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 160px;
+    background-color: #F5F5F5;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 4px;
+}
+
+#content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 160px;
+    right: 0
+}
+
+#content .section {
+    height: 100%;
+    width: 100%
+}
+
+/* Settings Panel */
+
+#settings-panel {
+    font-size: 14px
+}
+
+#settings-header {
+    background-color: #7f8c8d;
+    color: white;
+    border-bottom: 1px solid #4D90FE;
+    height: 4em
+}
+
+#settings-header .section {
+    padding: 16px 8px
+}
+
+#settings-header h2 {
+    margin: 0;
+    text-align: center
+}
+
+#settings-options {
+    position: absolute;
+    top: 4em;
+    bottom: 0;
+    margin-top: 1px;
+    width: 100%;
+    overflow-y: auto
+}
+
+#settings-options .section {
+    padding: 0 8px
+}
+
+#settings-options .block-option {
+    line-height: 1.5em;
+    border-bottom: 1px solid #7f8c8d;
+    padding-bottom: 0.7em;
+    padding-top: 0.7em
+}
+
+#settings-options .block-option.last {
+    border-bottom: none;
+    padding-bottom: 0
+}
+
+#settings-options .block-option .right-column {
+    margin-left: 10px
+}
+
+#settings-options h4 {
+    margin: 0 0 0.2em;
+    font-size: 100%;
+    font-weight: normal
+}
+
+#settings-options .custom-options,
+#settings-options .custom-options input {
+    font-size: 13px
+}
+
+#settings-options .hidden-by-default {
+    display: none
+}
+
+#settings-options td {
+    padding: 0 3px
+}
+
+#settings-options select {
+    min-width: 5em
+}
+
+#settings-options input {
+    height: 1em;
+    width: 2em;
+    font-size: 13px !important
+}
+
+#settings-options ul.buttons {
+    margin: 0;
+    padding: 0;
+    list-style: none outside none
+}
+
+#settings-options ul.buttons .fa:before {
+    margin: 6px;
+    display: block;
+    float: left
+}
+
+#smartPrint-button {
+    margin-top: 1em
+}

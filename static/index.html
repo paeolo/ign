@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title>IGN</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="IGN" />
+
+        <link type="text/css" rel="stylesheet" href="jquery-ui/jquery-ui.min.css"/>
+        <link type="text/css" rel="stylesheet" href="ol3/ol-4.1.1.css"/>
+        <link type="text/css" rel="stylesheet" href="ol3/GpPluginOl3.css"/>
+        <link type="text/css" rel="stylesheet" href="css/ign.css"/>
+
+        <script type='text/javascript' src='ol3/ol-4.1.1.js'></script>
+        <script type='text/javascript' src='ol3/GpPluginOl3.js'></script>
+
+    </head>
+    <body>
+        <div id="main">
+            <div id="left-column">
+                <div id="settings-panel">
+                    <div id="settings-header"><div class="section">
+                        <h2>IGN</h2>
+                        </div>
+                    </div>
+                    <div id="settings-options">
+                        <div class="section">
+                            <form id="formatter-form" action="#format" onsubmit="return false;">
+                                <div class="block-option first">
+                                    <h4>Format</h4>
+                                    <div class="right-column">
+                                        <select id="selectmenu" name="paper" title="Choisissez le format du papier pour imprimer la carte">
+                                            <option value="a4" selected="selected">A4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="block-option">
+                                    <h4>Orientation</h4>
+                                    <div class="right-column">
+                                        <div><label><input type="radio" name="orientation" value="portrait" checked="checked"/>Portrait</label></div>
+                                        <div><label><input type="radio" name="orientation" value="landscape"/>Paysage</label></div>
+                                    </div>
+                                </div>
+                                <div class="block-option">
+                                    <h4>Zoom</h4>
+                                    <div class="right-column">
+                                        <button id="zoom_1">1/25000</button>
+                                        <button id="zoom_2">1/50000</button>
+                                    </div>
+                                </div>
+                                <div id="smartPrint-button" class="button-flat">
+                                    <button id="print-button">Aperçu avant<br/>impression</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="section">
+                    <div id="map" style="width: 100%; height: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript' src='jquery-ui/external/jquery/jquery.js'></script>
+        <script type='text/javascript' src='jquery-ui/jquery-ui.min.js'></script>
+        <script type='text/javascript' src='js/ign.js'></script>
+    </body>
+</html>
