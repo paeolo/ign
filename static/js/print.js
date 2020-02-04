@@ -34,7 +34,7 @@ var map = new ol.Map
     layers: [
         new ol.layer.Tile({
             source : new ol.source.WMTS({
-                url: 'http://wxs.ign.fr/' + apiKey + '/wmts',
+                url: 'https://wxs.ign.fr/' + apiKey + '/wmts',
                 layer: 'GEOGRAPHICALGRIDSYSTEMS.MAPS',
                 matrixSet: 'PM',
                 format: 'image/jpeg',
