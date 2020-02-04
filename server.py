@@ -28,13 +28,14 @@ def make_app():
         (r"/(.*)", tornado.web.StaticFileHandler, {"path":"static/"})
     ])
 
-def signal_sigint(signal, frame):
-        tornado.ioloop.IOLoop.current().stop()
-        print("Server stopped")
+def on_shutdown():
+    print("Server stopped")
+    tornado.ioloop.IOLoop.instance().stop()
 
 if __name__ == "__main__":
-        signal.signal(signal.SIGINT, signal_sigint)
-        app = make_app()
-        app.listen(8888)
-        print("Server is running on http://localhost:8888")
-        tornado.ioloop.IOLoop.current().start()
+    app = make_app()
+    app.listen(8888)
+    loop = tornado.ioloop.IOLoop.current()
+    signal.signal(signal.SIGINT, lambda signal, frame: loop.add_callback_from_signal(on_shutdown))
+    print("Server is running on http://localhost:8888")
+    loop.start()
