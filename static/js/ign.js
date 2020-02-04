@@ -63,7 +63,7 @@ function load()
 
 Gp.Services.getConfig({
     callbackSuffix: '',
-    serverUrl: 'autoconf.json',
+    serverUrl: 'autoconf.js',
     onSuccess: load
 });
 
